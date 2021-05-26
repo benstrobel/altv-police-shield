@@ -7,15 +7,16 @@ alt.onClient("Debug", (player) => {
         alt.emit("Server:Shield:removeShield", player)
         debug = false;
     }else{
-        alt.emit("Server:Shield:giveShield", player)
+        alt.emit("Server:Shield:giveShield", player, false)
         debug = true;
     }
 })
 
 // --------------  Call these methods from your framework (serverside) --------------------
 
-alt.on("Server:Shield:giveShield", (targetPlayer) =>{
-    targetPlayer.setStreamSyncedMeta("shield", true);
+alt.on("Server:Shield:giveShield", (targetPlayer, riotshield) =>{
+    let shieldType = riotshield ? 0 : 1;
+    targetPlayer.setStreamSyncedMeta("shield", shieldType);
     targetPlayer.setStreamSyncedMeta("shieldStatus", false);
 })
 
