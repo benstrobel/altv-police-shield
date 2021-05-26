@@ -1,17 +1,5 @@
 import * as alt from 'alt-server';
 
-var debug = false
-
-alt.onClient("Debug", (player) => {
-    if(debug){
-        alt.emit("Server:Shield:removeShield", player)
-        debug = false;
-    }else{
-        alt.emit("Server:Shield:giveShield", player, false)
-        debug = true;
-    }
-})
-
 // --------------  Call these methods from your framework (serverside) --------------------
 
 alt.on("Server:Shield:giveShield", (targetPlayer, riotshield) =>{

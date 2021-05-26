@@ -6,15 +6,6 @@ let animName = "aim_2_idle_right"
 
 var isShieldUp = false
 
-alt.on('keydown', (key) => {
-    if (key == 'L'.charCodeAt(0)){
-        alt.emitServer("Debug");
-    }
-    if (key == 'G'.charCodeAt(0)){
-        game.giveWeaponToPed(alt.Player.local.scriptID, 453432689, 0, false, true);
-    }
-});
-
 // ----------- Interface Functions ----------------------
 
 alt.on('keydown', (key) => {
