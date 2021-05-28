@@ -1,5 +1,7 @@
 # Altv Police Shields
 
+![](preview.png)
+
 ## Features
 
 This ressource adds a useable ballistic & riot shield. They
