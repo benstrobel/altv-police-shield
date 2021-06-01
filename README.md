@@ -39,7 +39,7 @@ alt.on('keydown', (key) => {
 to the **index.mjs**:
 
 ```
-alt.onClient("Debug", (client) => {
+alt.onClient("Server:Shield:Test", (client) => {
     if(client.hasStreamSyncedMeta("shield")){
         alt.emit("Server:Shield:removeShield", client);
     }else{
